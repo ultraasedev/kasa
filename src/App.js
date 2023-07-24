@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 const router = createBrowserRouter([
 	{
 		path: "/",
+		errorElement:<NotFound />,
 		element: <Home />
 	},
 	{
@@ -17,10 +18,7 @@ const router = createBrowserRouter([
 		path: '/about',
 		element: <About />
 	},
-	{
-		path: "*",
-		element: <NotFound />
-	},
+	
 ]);
 
 function App() {
